@@ -17,7 +17,7 @@ const rotateAngle = angleStep;
 const radian = ((rotateAngle / 2) * Math.PI) / 180;
 
 // 각 card의 width
-const cardWidth = 300;
+const cardWidth = 400;
 
 //원의 중심점에서 떨어진 거리 구하기 (밑변의 길이 / tan(각도에 해당하는 라디안))
 const translateZ = Math.round(cardWidth / 2 / Math.tan(radian));
@@ -53,7 +53,7 @@ function zoomIn(clickedIndex) {
     setTimeout(() => {
         carouselCard[clickedIndex].style.transform = `rotateY(${
             clickedIndex * angleStep
-        }deg) translateZ(${translateZ}px) scale(2.3)`;
+        }deg) translateZ(${translateZ}px) scale(${(window.innerWidth * 0.5) / cardWidth})`;
         carouselCard[clickedIndex].style.zIndex = 9999;
         main.style.filter = "blur(3px)"; // 흐림 처리
         main.style.pointerEvents = "none"; // inactive mouse event

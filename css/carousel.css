@@ -6,8 +6,8 @@ body {
 }
 
 .scene {
-    width: 300px;
-    height: 200px;
+    width: 400px;
+    height: 300px;
     position: relative;
     /* 원근감 */
     perspective: 2000px;
@@ -30,8 +30,8 @@ body {
 .carousel-card {
     position: absolute;
     /* 셀 배치를 약간씩 떨어뜨림 */
-    width: 280px;
-    height: 150px;
+    width: 380px;
+    height: 250px;
     left: 0;
     top: 0;
     transition: transform 0.5s ease;
@@ -42,6 +42,8 @@ body {
     align-items: center;
     justify-content: center;
     transform-origin: center center;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
 }
 
 .carousel-card:nth-child(1) {
